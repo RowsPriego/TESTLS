@@ -1,0 +1,3 @@
+ansible_connection: ssh
+ansible_ssh_user: operador
+ansible_ssh_pass: 0perand0

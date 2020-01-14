@@ -1,0 +1,4 @@
+ls_docker_dir: "../../docker/localstack"
+ls_lambda_executor: "docker"
+ls_lambda_remote_docker: false
+ls_data_dir: /tmp/localstack/data

@@ -1,0 +1,727 @@
+2019/12/30 09:31:19 [INFO] backend/local: apply calling Apply
+2019/12/30 09:31:19 [INFO] terraform: building graph: GraphTypeApply
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2019/12/30 09:31:19 [TRACE] ConfigTransformer: Starting for path: 
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+------
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.DiffTransformer
+2019/12/30 09:31:19 [TRACE] DiffTransformer starting
+2019/12/30 09:31:19 [TRACE] DiffTransformer: found Create change for aws_api_gateway_rest_api.otra_api 
+2019/12/30 09:31:19 [TRACE] DiffTransformer: aws_api_gateway_rest_api.otra_api will be represented by aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:19 [TRACE] DiffTransformer: found Create change for aws_api_gateway_rest_api.test_api 
+2019/12/30 09:31:19 [TRACE] DiffTransformer: aws_api_gateway_rest_api.test_api will be represented by aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:19 [TRACE] DiffTransformer complete
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+------
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.OrphanResourceTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.OrphanResourceTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2019/12/30 09:31:19 [TRACE] AttachResourceConfigTransformer: attaching to "aws_api_gateway_rest_api.test_api (prepare state)" (*terraform.NodeApplyableResource) config from main.tf:18,1-47
+2019/12/30 09:31:19 [TRACE] AttachResourceConfigTransformer: attaching to "aws_api_gateway_rest_api.otra_api (prepare state)" (*terraform.NodeApplyableResource) config from main.tf:46,1-47
+2019/12/30 09:31:19 [TRACE] AttachResourceConfigTransformer: attaching to "aws_api_gateway_rest_api.otra_api" (*terraform.NodeApplyableResourceInstance) config from main.tf:46,1-47
+2019/12/30 09:31:19 [TRACE] AttachResourceConfigTransformer: attaching to "aws_api_gateway_rest_api.test_api" (*terraform.NodeApplyableResourceInstance) config from main.tf:18,1-47
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2019/12/30 09:31:19 [DEBUG] Resource state not found for node "aws_api_gateway_rest_api.test_api", instance aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:19 [DEBUG] Resource state not found for node "aws_api_gateway_rest_api.otra_api", instance aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_region - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+------
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.LocalTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.OutputTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2019/12/30 09:31:19 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2019/12/30 09:31:19 [TRACE] ProviderConfigTransformer: attaching to "provider.aws" provider configuration from main.tf:1,1-15
+2019/12/30 09:31:19 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_region - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+------
+2019/12/30 09:31:19 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2019/12/30 09:31:19 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2019/12/30 09:31:19 [TRACE] ProviderTransformer: aws_api_gateway_rest_api.test_api (prepare state) is provided by provider.aws or inherited equivalent
+2019/12/30 09:31:19 [TRACE] ProviderTransformer: aws_api_gateway_rest_api.otra_api (prepare state) is provided by provider.aws or inherited equivalent
+2019/12/30 09:31:19 [TRACE] ProviderTransformer: aws_api_gateway_rest_api.otra_api is provided by provider.aws or inherited equivalent
+2019/12/30 09:31:19 [TRACE] ProviderTransformer: aws_api_gateway_rest_api.test_api is provided by provider.aws or inherited equivalent
+2019/12/30 09:31:19 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_api_gateway_rest_api.test_api (prepare state)
+2019/12/30 09:31:19 [DEBUG] ProviderTransformer: "aws_api_gateway_rest_api.test_api (prepare state)" (*terraform.NodeApplyableResource) needs provider.aws
+2019/12/30 09:31:19 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_api_gateway_rest_api.otra_api (prepare state)
+2019/12/30 09:31:19 [DEBUG] ProviderTransformer: "aws_api_gateway_rest_api.otra_api (prepare state)" (*terraform.NodeApplyableResource) needs provider.aws
+2019/12/30 09:31:19 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:19 [DEBUG] ProviderTransformer: "aws_api_gateway_rest_api.otra_api" (*terraform.NodeApplyableResourceInstance) needs provider.aws
+2019/12/30 09:31:19 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:19 [DEBUG] ProviderTransformer: "aws_api_gateway_rest_api.test_api" (*terraform.NodeApplyableResourceInstance) needs provider.aws
+2019/12/30 09:31:19 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_region - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+------
+2019/12/30 09:31:19 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2019/12/30 09:31:19 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2019/12/30 09:31:19 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_region - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+------
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2019/12/30 09:31:19 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_api_gateway_rest_api.test_api (prepare state)
+2019/12/30 09:31:19 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_api_gateway_rest_api.otra_api (prepare state)
+2019/12/30 09:31:19 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:19 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:19 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.aws
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2019/12/30 09:31:19 [DEBUG] ReferenceTransformer: "var.aws_secret_key" references: []
+2019/12/30 09:31:19 [DEBUG] ReferenceTransformer: "var.aws_region" references: []
+2019/12/30 09:31:19 [DEBUG] ReferenceTransformer: "provider.aws" references: []
+2019/12/30 09:31:19 [DEBUG] ReferenceTransformer: "aws_api_gateway_rest_api.test_api (prepare state)" references: []
+2019/12/30 09:31:19 [DEBUG] ReferenceTransformer: "aws_api_gateway_rest_api.otra_api (prepare state)" references: []
+2019/12/30 09:31:19 [DEBUG] ReferenceTransformer: "aws_api_gateway_rest_api.otra_api" references: []
+2019/12/30 09:31:19 [DEBUG] ReferenceTransformer: "aws_api_gateway_rest_api.test_api" references: []
+2019/12/30 09:31:19 [DEBUG] ReferenceTransformer: "var.aws_access_key" references: []
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2019/12/30 09:31:19 [TRACE] AttachDependenciesTransformer: aws_api_gateway_rest_api.otra_api depends on []
+2019/12/30 09:31:19 [TRACE] AttachDependenciesTransformer: aws_api_gateway_rest_api.test_api depends on []
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_region - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+------
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_region - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+------
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.RootTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_region - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+------
+2019/12/30 09:31:19 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2019/12/30 09:31:19 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.otra_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+aws_api_gateway_rest_api.test_api (prepare state) - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_region - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_api_gateway_rest_api.otra_api - *terraform.NodeApplyableResourceInstance
+  aws_api_gateway_rest_api.test_api - *terraform.NodeApplyableResourceInstance
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_region - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+------
+2019/12/30 09:31:19 [DEBUG] Starting graph walk: walkApply
+2019/12/30 09:31:19 [TRACE] dag/walk: updating graph
+2019/12/30 09:31:19 [TRACE] dag/walk: added new vertex: "provider.aws"
+2019/12/30 09:31:19 [TRACE] dag/walk: added new vertex: "aws_api_gateway_rest_api.otra_api (prepare state)"
+2019/12/30 09:31:19 [TRACE] dag/walk: added new vertex: "aws_api_gateway_rest_api.test_api"
+2019/12/30 09:31:19 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2019/12/30 09:31:19 [TRACE] dag/walk: added new vertex: "var.aws_access_key"
+2019/12/30 09:31:19 [TRACE] dag/walk: added new vertex: "var.aws_region"
+2019/12/30 09:31:19 [TRACE] dag/walk: added new vertex: "root"
+2019/12/30 09:31:19 [TRACE] dag/walk: added new vertex: "aws_api_gateway_rest_api.test_api (prepare state)"
+2019/12/30 09:31:19 [TRACE] dag/walk: added new vertex: "aws_api_gateway_rest_api.otra_api"
+2019/12/30 09:31:19 [TRACE] dag/walk: added new vertex: "var.aws_secret_key"
+2019/12/30 09:31:19 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_api_gateway_rest_api.otra_api"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "aws_api_gateway_rest_api.test_api"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_api_gateway_rest_api.test_api"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "aws_api_gateway_rest_api.otra_api" waiting on "aws_api_gateway_rest_api.otra_api (prepare state)"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "aws_api_gateway_rest_api.test_api" waiting on "aws_api_gateway_rest_api.test_api (prepare state)"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "aws_api_gateway_rest_api.otra_api (prepare state)" waiting on "provider.aws"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "var.aws_access_key"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "aws_api_gateway_rest_api.otra_api"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "aws_api_gateway_rest_api.test_api (prepare state)" waiting on "provider.aws"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "var.aws_region"
+2019/12/30 09:31:19 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "var.aws_secret_key"
+2019/12/30 09:31:19 [TRACE] dag/walk: dependencies changed for "aws_api_gateway_rest_api.otra_api (prepare state)", sending new deps
+2019/12/30 09:31:19 [TRACE] dag/walk: dependencies changed for "aws_api_gateway_rest_api.test_api (prepare state)", sending new deps
+2019/12/30 09:31:19 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2019/12/30 09:31:19 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2019/12/30 09:31:19 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/12/30 09:31:19 [TRACE] dag/walk: dependencies changed for "aws_api_gateway_rest_api.otra_api", sending new deps
+2019/12/30 09:31:19 [TRACE] dag/walk: dependencies changed for "aws_api_gateway_rest_api.test_api", sending new deps
+2019/12/30 09:31:19 [TRACE] dag/walk: visiting "var.aws_access_key"
+2019/12/30 09:31:19 [TRACE] vertex "var.aws_access_key": starting visit (*terraform.NodeRootVariable)
+2019/12/30 09:31:19 [TRACE] vertex "var.aws_access_key": visit complete
+2019/12/30 09:31:19 [TRACE] dag/walk: visiting "var.aws_secret_key"
+2019/12/30 09:31:19 [TRACE] vertex "var.aws_secret_key": starting visit (*terraform.NodeRootVariable)
+2019/12/30 09:31:19 [TRACE] vertex "var.aws_secret_key": visit complete
+2019/12/30 09:31:19 [TRACE] dag/walk: visiting "var.aws_region"
+2019/12/30 09:31:19 [TRACE] dag/walk: visiting "provider.aws"
+2019/12/30 09:31:19 [TRACE] vertex "var.aws_region": starting visit (*terraform.NodeRootVariable)
+2019/12/30 09:31:19 [TRACE] vertex "provider.aws": starting visit (*terraform.NodeApplyableProvider)
+2019/12/30 09:31:19 [TRACE] vertex "var.aws_region": visit complete
+2019/12/30 09:31:19 [TRACE] vertex "provider.aws": evaluating
+2019/12/30 09:31:19 [TRACE] [walkApply] Entering eval tree: provider.aws
+2019/12/30 09:31:19 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/12/30 09:31:19 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2019-12-30T09:31:19.244+0100 [INFO]  plugin: configuring client automatic mTLS
+2019-12-30T09:31:19.297+0100 [DEBUG] plugin: starting plugin: path=/home/rosario.priego/Projects/TESTLS/terraform/aws/apigateway/.terraform/plugins/linux_amd64/terraform-provider-aws_v2.43.0_x4 args=[/home/rosario.priego/Projects/TESTLS/terraform/aws/apigateway/.terraform/plugins/linux_amd64/terraform-provider-aws_v2.43.0_x4]
+2019-12-30T09:31:19.297+0100 [DEBUG] plugin: plugin started: path=/home/rosario.priego/Projects/TESTLS/terraform/aws/apigateway/.terraform/plugins/linux_amd64/terraform-provider-aws_v2.43.0_x4 pid=23021
+2019-12-30T09:31:19.297+0100 [DEBUG] plugin: waiting for RPC address: path=/home/rosario.priego/Projects/TESTLS/terraform/aws/apigateway/.terraform/plugins/linux_amd64/terraform-provider-aws_v2.43.0_x4
+2019-12-30T09:31:19.312+0100 [INFO]  plugin.terraform-provider-aws_v2.43.0_x4: configuring server automatic mTLS: timestamp=2019-12-30T09:31:19.312+0100
+2019-12-30T09:31:19.344+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: plugin address: network=unix address=/tmp/plugin484903507 timestamp=2019-12-30T09:31:19.344+0100
+2019-12-30T09:31:19.344+0100 [DEBUG] plugin: using plugin: version=5
+2019/12/30 09:31:19 [TRACE] BuiltinEvalContext: Initialized "aws" provider for provider.aws
+2019/12/30 09:31:19 [TRACE] <root>: eval: terraform.EvalNoop
+2019/12/30 09:31:19 [TRACE] <root>: eval: terraform.EvalNoop
+2019/12/30 09:31:19 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/12/30 09:31:19 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/12/30 09:31:19 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/12/30 09:31:19 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/12/30 09:31:19 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/12/30 09:31:19 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2019/12/30 09:31:19 [TRACE] buildProviderConfig for provider.aws: using explicit config only
+2019/12/30 09:31:19 [TRACE] GRPCProvider: GetSchema
+2019/12/30 09:31:19 [TRACE] GRPCProvider: Configure
+2019-12-30T09:31:19.455+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:19 [INFO] No assume_role block read from configuration
+2019-12-30T09:31:19.463+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:19 [INFO] Building AWS auth structure
+2019-12-30T09:31:19.463+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:19 [INFO] Setting AWS metadata API timeout to 100ms
+2019-12-30T09:31:19.463+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:19 [INFO] AWS Auth provider used: "StaticProvider"
+2019-12-30T09:31:19.463+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:19 [WARN] AWS account ID not found for provider. See https://www.terraform.io/docs/providers/aws/index.html#skip_requesting_account_id for implications.
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:19 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeAccountAttributes Details:
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ REQUEST POST-SIGN ]-----------------------------
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: POST / HTTP/1.1
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Host: ec2.us-west-2.amazonaws.com
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: User-Agent: aws-sdk-go/1.26.5 (go1.13.4; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.12.17 (+https://www.terraform.io)
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Length: 87
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Authorization: AWS4-HMAC-SHA256 Credential=var.aws_access_key/20191230/us-west-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=d176e348bec8bbf7c4636e419afeb54debc97264ec2dd4ef09bd005465a404a0
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: application/x-www-form-urlencoded; charset=utf-8
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: X-Amz-Date: 20191230T083119Z
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept-Encoding: gzip
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:19.464+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Action=DescribeAccountAttributes&AttributeName.1=supported-platforms&Version=2016-11-15
+2019-12-30T09:31:19.465+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeAccountAttributes Details:
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ RESPONSE ]--------------------------------------
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: HTTP/1.1 401 Unauthorized
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Connection: close
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Transfer-Encoding: chunked
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Date: Mon, 30 Dec 2019 08:31:20 GMT
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Server: AmazonEC2
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: <Response><Errors><Error><Code>AuthFailure</Code><Message>AWS was not able to validate the provided access credentials</Message></Error></Errors><RequestID>8ca09388-2e2a-4275-8e02-80e24a1e8fc2</RequestID></Response>
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Validate Response ec2/DescribeAccountAttributes failed, attempt 0/25, error AuthFailure: AWS was not able to validate the provided access credentials
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4:  status code: 401, request id: 8ca09388-2e2a-4275-8e02-80e24a1e8fc2
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [WARN] Unable to get supported EC2 platforms: AuthFailure: AWS was not able to validate the provided access credentials
+2019-12-30T09:31:20.777+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4:  status code: 401, request id: 8ca09388-2e2a-4275-8e02-80e24a1e8fc2
+2019/12/30 09:31:20 [TRACE] [walkApply] Exiting eval tree: provider.aws
+2019/12/30 09:31:20 [TRACE] vertex "provider.aws": visit complete
+2019/12/30 09:31:20 [TRACE] dag/walk: visiting "aws_api_gateway_rest_api.test_api (prepare state)"
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.test_api (prepare state)": starting visit (*terraform.NodeApplyableResource)
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.test_api (prepare state)": evaluating
+2019/12/30 09:31:20 [TRACE] [walkApply] Entering eval tree: aws_api_gateway_rest_api.test_api (prepare state)
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2019/12/30 09:31:20 [TRACE] [walkApply] Exiting eval tree: aws_api_gateway_rest_api.test_api (prepare state)
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.test_api (prepare state)": visit complete
+2019/12/30 09:31:20 [TRACE] dag/walk: visiting "aws_api_gateway_rest_api.test_api"
+2019/12/30 09:31:20 [TRACE] dag/walk: visiting "aws_api_gateway_rest_api.otra_api (prepare state)"
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.test_api": starting visit (*terraform.NodeApplyableResourceInstance)
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.test_api": evaluating
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.otra_api (prepare state)": starting visit (*terraform.NodeApplyableResource)
+2019/12/30 09:31:20 [TRACE] [walkApply] Entering eval tree: aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.otra_api (prepare state)": evaluating
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2019/12/30 09:31:20 [TRACE] [walkApply] Entering eval tree: aws_api_gateway_rest_api.otra_api (prepare state)
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2019/12/30 09:31:20 [TRACE] [walkApply] Exiting eval tree: aws_api_gateway_rest_api.otra_api (prepare state)
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.otra_api (prepare state)": visit complete
+2019/12/30 09:31:20 [TRACE] dag/walk: visiting "aws_api_gateway_rest_api.otra_api"
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.otra_api": starting visit (*terraform.NodeApplyableResourceInstance)
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.otra_api": evaluating
+2019/12/30 09:31:20 [TRACE] [walkApply] Entering eval tree: aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2019/12/30 09:31:20 [TRACE] EvalReadDiff: Read Create change from plan for aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalIf
+2019/12/30 09:31:20 [TRACE] <root>: eval: terraform.EvalNoop
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalIf
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalReadState
+2019/12/30 09:31:20 [TRACE] EvalReadState: reading state for aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] EvalReadState: no state present for aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2019/12/30 09:31:20 [TRACE] EvalReadDiff: Read Create change from plan for aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalDiff
+2019/12/30 09:31:20 [TRACE] EvalReadDiff: Read Create change from plan for aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalIf
+2019/12/30 09:31:20 [TRACE] <root>: eval: terraform.EvalNoop
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalIf
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalReadState
+2019/12/30 09:31:20 [TRACE] EvalReadState: reading state for aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] EvalReadState: no state present for aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2019/12/30 09:31:20 [TRACE] EvalReadDiff: Read Create change from plan for aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalDiff
+2019/12/30 09:31:20 [TRACE] Re-validating config for "aws_api_gateway_rest_api.test_api"
+2019/12/30 09:31:20 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2019/12/30 09:31:20 [TRACE] Re-validating config for "aws_api_gateway_rest_api.otra_api"
+2019/12/30 09:31:20 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2019/12/30 09:31:20 [TRACE] GRPCProvider: PlanResourceChange
+2019/12/30 09:31:20 [TRACE] GRPCProvider: PlanResourceChange
+2019/12/30 09:31:20 [WARN] Provider "aws" produced an invalid plan for aws_api_gateway_rest_api.otra_api, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .minimum_compression_size: planned value cty.NumberIntVal(-1) does not match config value cty.NullVal(cty.Number)
+      - .api_key_source: planned value cty.StringVal("HEADER") does not match config value cty.NullVal(cty.String)
+      - .endpoint_configuration: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2019/12/30 09:31:20 [WARN] Provider "aws" produced an invalid plan for aws_api_gateway_rest_api.test_api, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .api_key_source: planned value cty.StringVal("HEADER") does not match config value cty.NullVal(cty.String)
+      - .minimum_compression_size: planned value cty.NumberIntVal(-1) does not match config value cty.NullVal(cty.Number)
+      - .endpoint_configuration: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalCheckPlannedChange
+aws_api_gateway_rest_api.test_api: Creating...
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalCheckPlannedChange
+2019/12/30 09:31:20 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action Create) matches planned change (action Create)
+2019/12/30 09:31:20 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action Create) matches planned change (action Create)
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalReadState
+2019/12/30 09:31:20 [TRACE] EvalReadState: reading state for aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] EvalReadState: no state present for aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalReduceDiff
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalIf
+2019/12/30 09:31:20 [TRACE] <root>: eval: terraform.EvalNoop
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalApplyPre
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalReadState
+2019/12/30 09:31:20 [TRACE] EvalReadState: reading state for aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] EvalReadState: no state present for aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalReduceDiff
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalIf
+2019/12/30 09:31:20 [TRACE] <root>: eval: terraform.EvalNoop
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalApplyPre
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalApply
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalApply
+2019/12/30 09:31:20 [DEBUG] aws_api_gateway_rest_api.test_api: applying the planned Create change
+aws_api_gateway_rest_api.otra_api: Creating...
+2019/12/30 09:31:20 [TRACE] GRPCProvider: ApplyResourceChange
+2019/12/30 09:31:20 [DEBUG] aws_api_gateway_rest_api.otra_api: applying the planned Create change
+2019/12/30 09:31:20 [TRACE] GRPCProvider: ApplyResourceChange
+2019-12-30T09:31:20.794+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] setting computed for "endpoint_configuration" from ComputedKeys
+2019-12-30T09:31:20.794+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] setting computed for "endpoint_configuration" from ComputedKeys
+2019-12-30T09:31:20.794+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] Creating API Gateway
+2019-12-30T09:31:20.794+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] Creating API Gateway
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Request apigateway/CreateRestApi Details:
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ REQUEST POST-SIGN ]-----------------------------
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: POST /restapis HTTP/1.1
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Host: localhost:4567
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: User-Agent: aws-sdk-go/1.26.5 (go1.13.4; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.12.17 (+https://www.terraform.io)
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Length: 85
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept: application/json
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Authorization: AWS4-HMAC-SHA256 Credential=var.aws_access_key/20191230/us-west-2/apigateway/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=86273d14052c701ebae7125230452521521a20645f055099a4e38fb3a685c9cf
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: application/json
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: X-Amz-Date: 20191230T083120Z
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept-Encoding: gzip
+2019-12-30T09:31:20.795+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: {"apiKeySource":"HEADER","description":"Probando probando...","name":"otra-rest-api"}
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Request apigateway/CreateRestApi Details:
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ REQUEST POST-SIGN ]-----------------------------
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: POST /restapis HTTP/1.1
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Host: localhost:4567
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: User-Agent: aws-sdk-go/1.26.5 (go1.13.4; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.12.17 (+https://www.terraform.io)
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Length: 102
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept: application/json
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Authorization: AWS4-HMAC-SHA256 Credential=var.aws_access_key/20191230/us-west-2/apigateway/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=336e58700f5cae91b2a099a9b8c6a529c698b418470518008cca51e192be6b0b
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: application/json
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: X-Amz-Date: 20191230T083120Z
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept-Encoding: gzip
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: {"apiKeySource":"HEADER","description":"Testeando un API de AWS en localstack","name":"test-rest-api"}
+2019-12-30T09:31:20.796+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Response apigateway/CreateRestApi Details:
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ RESPONSE ]--------------------------------------
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: HTTP/1.1 200 OK
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Length: 128
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Headers: authorization,content-type,content-md5,cache-control,x-amz-content-sha256,x-amz-date,x-amz-security-token,x-amz-user-agent,x-amz-target,x-amz-acl,x-amz-version-id,x-localstack-target,x-amz-tagging
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Methods: HEAD,GET,PUT,POST,DELETE,OPTIONS,PATCH
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Origin: *
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Expose-Headers: x-amz-version-id
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: text/html; charset=utf-8
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Date: Mon, 30 Dec 2019 08:31:20 GMT
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Server: BaseHTTP/0.6 Python/3.7.5
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] {"id": "3a6olmmdlg", "name": "test-rest-api", "description": "Testeando un API de AWS en localstack", "createdDate": 1577694680}
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] Reading API Gateway 3a6olmmdlg
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Request apigateway/GetRestApi Details:
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ REQUEST POST-SIGN ]-----------------------------
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: GET /restapis/3a6olmmdlg HTTP/1.1
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Host: localhost:4567
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: User-Agent: aws-sdk-go/1.26.5 (go1.13.4; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.12.17 (+https://www.terraform.io)
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept: application/json
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Authorization: AWS4-HMAC-SHA256 Credential=var.aws_access_key/20191230/us-west-2/apigateway/aws4_request, SignedHeaders=accept;content-type;host;x-amz-date, Signature=6221a6e73bf1b6ff21e58fe286423a87dbf6456b6d61063511058c98f40dc450
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: application/json
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: X-Amz-Date: 20191230T083120Z
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept-Encoding: gzip
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.828+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Response apigateway/CreateRestApi Details:
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ RESPONSE ]--------------------------------------
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: HTTP/1.1 200 OK
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Length: 111
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Headers: authorization,content-type,content-md5,cache-control,x-amz-content-sha256,x-amz-date,x-amz-security-token,x-amz-user-agent,x-amz-target,x-amz-acl,x-amz-version-id,x-localstack-target,x-amz-tagging
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Methods: HEAD,GET,PUT,POST,DELETE,OPTIONS,PATCH
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Origin: *
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Expose-Headers: x-amz-version-id
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: text/html; charset=utf-8
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Date: Mon, 30 Dec 2019 08:31:20 GMT
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Server: BaseHTTP/0.6 Python/3.7.5
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] {"id": "3ymcxi7slj", "name": "otra-rest-api", "description": "Probando probando...", "createdDate": 1577694680}
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] Reading API Gateway 3ymcxi7slj
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Request apigateway/GetRestApi Details:
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ REQUEST POST-SIGN ]-----------------------------
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: GET /restapis/3ymcxi7slj HTTP/1.1
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Host: localhost:4567
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: User-Agent: aws-sdk-go/1.26.5 (go1.13.4; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.12.17 (+https://www.terraform.io)
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept: application/json
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Authorization: AWS4-HMAC-SHA256 Credential=var.aws_access_key/20191230/us-west-2/apigateway/aws4_request, SignedHeaders=accept;content-type;host;x-amz-date, Signature=4b7b0d06742679ceedd906ccd528cdce6563c8c942ed08eb1e8dba9228823d7d
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: application/json
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: X-Amz-Date: 20191230T083120Z
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept-Encoding: gzip
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.830+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Response apigateway/GetRestApi Details:
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ RESPONSE ]--------------------------------------
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: HTTP/1.1 200 OK
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Length: 128
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Headers: authorization,content-type,content-md5,cache-control,x-amz-content-sha256,x-amz-date,x-amz-security-token,x-amz-user-agent,x-amz-target,x-amz-acl,x-amz-version-id,x-localstack-target,x-amz-tagging
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Methods: HEAD,GET,PUT,POST,DELETE,OPTIONS,PATCH
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Origin: *
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Expose-Headers: x-amz-version-id
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: text/html; charset=utf-8
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Date: Mon, 30 Dec 2019 08:31:20 GMT
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Server: BaseHTTP/0.6 Python/3.7.5
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.840+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] {"id": "3a6olmmdlg", "name": "test-rest-api", "description": "Testeando un API de AWS en localstack", "createdDate": 1577694680}
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Request apigateway/GetResources Details:
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ REQUEST POST-SIGN ]-----------------------------
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: GET /restapis/3a6olmmdlg/resources HTTP/1.1
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Host: localhost:4567
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: User-Agent: aws-sdk-go/1.26.5 (go1.13.4; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.12.17 (+https://www.terraform.io)
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept: application/json
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Authorization: AWS4-HMAC-SHA256 Credential=var.aws_access_key/20191230/us-west-2/apigateway/aws4_request, SignedHeaders=accept;content-type;host;x-amz-date, Signature=e1c09a2cdd543c3462899b47c5d920964c7e30b87f6a2215333189026967f7c4
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: application/json
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: X-Amz-Date: 20191230T083120Z
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept-Encoding: gzip
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.841+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Response apigateway/GetRestApi Details:
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ RESPONSE ]--------------------------------------
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: HTTP/1.1 200 OK
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Length: 111
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Headers: authorization,content-type,content-md5,cache-control,x-amz-content-sha256,x-amz-date,x-amz-security-token,x-amz-user-agent,x-amz-target,x-amz-acl,x-amz-version-id,x-localstack-target,x-amz-tagging
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Methods: HEAD,GET,PUT,POST,DELETE,OPTIONS,PATCH
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Origin: *
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Expose-Headers: x-amz-version-id
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: text/html; charset=utf-8
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Date: Mon, 30 Dec 2019 08:31:20 GMT
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Server: BaseHTTP/0.6 Python/3.7.5
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] {"id": "3ymcxi7slj", "name": "otra-rest-api", "description": "Probando probando...", "createdDate": 1577694680}
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Request apigateway/GetResources Details:
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ REQUEST POST-SIGN ]-----------------------------
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: GET /restapis/3ymcxi7slj/resources HTTP/1.1
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Host: localhost:4567
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: User-Agent: aws-sdk-go/1.26.5 (go1.13.4; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.12.17 (+https://www.terraform.io)
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept: application/json
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Authorization: AWS4-HMAC-SHA256 Credential=var.aws_access_key/20191230/us-west-2/apigateway/aws4_request, SignedHeaders=accept;content-type;host;x-amz-date, Signature=989771b3f85c53f55588b157d04d2d04ff506b279e5d0d2cf956b002d05592f5
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: application/json
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: X-Amz-Date: 20191230T083120Z
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Accept-Encoding: gzip
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.842+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Response apigateway/GetResources Details:
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ RESPONSE ]--------------------------------------
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: HTTP/1.1 200 OK
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Length: 77
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Headers: authorization,content-type,content-md5,cache-control,x-amz-content-sha256,x-amz-date,x-amz-security-token,x-amz-user-agent,x-amz-target,x-amz-acl,x-amz-version-id,x-localstack-target,x-amz-tagging
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Methods: HEAD,GET,PUT,POST,DELETE,OPTIONS,PATCH
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Origin: *
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Expose-Headers: x-amz-version-id
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: text/html; charset=utf-8
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Date: Mon, 30 Dec 2019 08:31:20 GMT
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Server: BaseHTTP/0.6 Python/3.7.5
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.849+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] {"item": [{"path": "/", "id": "4f2gcl7cs5", "resourceMethods": {"GET": {}}}]}
+2019/12/30 09:31:20 [WARN] Provider "aws" produced an unexpected new value for aws_api_gateway_rest_api.test_api, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .api_key_source: was cty.StringVal("HEADER"), but now cty.StringVal("")
+      - .policy: was null, but now cty.StringVal("")
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalWriteState
+2019/12/30 09:31:20 [TRACE] EvalWriteState: recording 0 dependencies for aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] EvalWriteState: writing current state object for aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalApplyProvisioners
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalWriteState
+2019/12/30 09:31:20 [TRACE] EvalWriteState: recording 0 dependencies for aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] EvalWriteState: writing current state object for aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalIf
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalIf
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalApplyPost
+aws_api_gateway_rest_api.test_api: Creation complete after 0s [id=3a6olmmdlg]
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalUpdateStateHook
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: read nil snapshot
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: no original state snapshot to back up
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 1
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] DEBUG: Response apigateway/GetResources Details:
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: ---[ RESPONSE ]--------------------------------------
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: HTTP/1.1 200 OK
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Length: 77
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Headers: authorization,content-type,content-md5,cache-control,x-amz-content-sha256,x-amz-date,x-amz-security-token,x-amz-user-agent,x-amz-target,x-amz-acl,x-amz-version-id,x-localstack-target,x-amz-tagging
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Methods: HEAD,GET,PUT,POST,DELETE,OPTIONS,PATCH
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Allow-Origin: *
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Access-Control-Expose-Headers: x-amz-version-id
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Content-Type: text/html; charset=utf-8
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Date: Mon, 30 Dec 2019 08:31:20 GMT
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: Server: BaseHTTP/0.6 Python/3.7.5
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: -----------------------------------------------------
+2019-12-30T09:31:20.853+0100 [DEBUG] plugin.terraform-provider-aws_v2.43.0_x4: 2019/12/30 09:31:20 [DEBUG] [aws-sdk-go] {"item": [{"path": "/", "id": "7xo3duvb8j", "resourceMethods": {"GET": {}}}]}
+2019/12/30 09:31:20 [WARN] Provider "aws" produced an unexpected new value for aws_api_gateway_rest_api.otra_api, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .api_key_source: was cty.StringVal("HEADER"), but now cty.StringVal("")
+      - .policy: was null, but now cty.StringVal("")
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalWriteState
+2019/12/30 09:31:20 [TRACE] EvalWriteState: recording 0 dependencies for aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] EvalWriteState: writing current state object for aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] [walkApply] Exiting eval tree: aws_api_gateway_rest_api.test_api
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.test_api": visit complete
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalApplyProvisioners
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalWriteState
+2019/12/30 09:31:20 [TRACE] EvalWriteState: recording 0 dependencies for aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] EvalWriteState: writing current state object for aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalIf
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalIf
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalApplyPost
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalUpdateStateHook
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+aws_api_gateway_rest_api.otra_api: Creation complete after 0s [id=3ymcxi7slj]
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: read snapshot with lineage "98652e97-01ac-ac14-1135-ce49606d371b" serial 1
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: no original state snapshot to back up
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 2
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2019/12/30 09:31:20 [TRACE] [walkApply] Exiting eval tree: aws_api_gateway_rest_api.otra_api
+2019/12/30 09:31:20 [TRACE] vertex "aws_api_gateway_rest_api.otra_api": visit complete
+2019/12/30 09:31:20 [TRACE] dag/walk: visiting "provider.aws (close)"
+2019/12/30 09:31:20 [TRACE] vertex "provider.aws (close)": starting visit (*terraform.graphNodeCloseProvider)
+2019/12/30 09:31:20 [TRACE] vertex "provider.aws (close)": evaluating
+2019/12/30 09:31:20 [TRACE] [walkApply] Entering eval tree: provider.aws (close)
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2019/12/30 09:31:20 [TRACE] GRPCProvider: Close
+2019/12/30 09:31:20 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2019/12/30 09:31:20 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2019/12/30 09:31:20 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2019/12/30 09:31:20 [TRACE] [walkApply] Entering eval tree: meta.count-boundary (EachMode fixup)
+2019/12/30 09:31:20 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2019/12/30 09:31:20 [TRACE] [walkApply] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2019/12/30 09:31:20 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2019-12-30T09:31:20.871+0100 [DEBUG] plugin: plugin process exited: path=/home/rosario.priego/Projects/TESTLS/terraform/aws/apigateway/.terraform/plugins/linux_amd64/terraform-provider-aws_v2.43.0_x4 pid=23021
+2019-12-30T09:31:20.871+0100 [DEBUG] plugin: plugin exited
+2019/12/30 09:31:20 [TRACE] [walkApply] Exiting eval tree: provider.aws (close)
+2019/12/30 09:31:20 [TRACE] vertex "provider.aws (close)": visit complete
+2019/12/30 09:31:20 [TRACE] dag/walk: visiting "root"
+2019/12/30 09:31:20 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2019/12/30 09:31:20 [TRACE] vertex "root": visit complete
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: no original state snapshot to back up
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 3
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2019/12/30 09:31:20 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
