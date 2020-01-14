@@ -1,14 +1,15 @@
-### CREAR UN POLICY 
-# data "aws_iam_policy_document" "instance-assume-role-policy" {
-#   statement {
-#     actions = ["sts:AssumeRole"]
+# Managed policies
+data "aws_iam_policy" "EC2FullAccess" {
+  arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
+}
 
-#     principals {
-#       type        = "Service"
-#       identifiers = ["ec2.amazonaws.com"]
-#     }
-#   }
-# }
+data "aws_iam_policy" "APIGatewayFullAccess" {
+  arn = "arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator"
+}
+
+data "aws_iam_policy" "S3FullAccess" {
+  arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+}
 
 provider "aws" {
   region                      = "us-west-2"
@@ -43,17 +44,22 @@ provider "aws" {
   }
 }
 
-# resource "aws_iam_role" "ec2_role" {
-#   name               = "ec2-role"  
-#   assume_role_policy = data.aws_iam_policy_document.instance-assume-role-policy.json
-# }
-
-# resource "aws_iam_user" "k8suser" {
-#   name = "k8s-user"
-# }
-
-
-resource "aws_iam_group" "k8sdevelopers" {
+resource "aws_iam_group" "k8s_developers" {
   name = "k8s-developers"
+}
+
+resource "aws_iam_group" "s3_users" {
+  name = "s3-users"
+}
+
+
+resource "aws_iam_group_policy_attachment" "k8s-attach" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
+  group = "k8s-developers"
+}
+
+resource "aws_iam_group_policy_attachment" "s3-attach" {
+  policy_arn =  data.aws_iam_policy.S3FullAccess.arn
+  group = aws_iam_group.s3_users.name
 }
 
