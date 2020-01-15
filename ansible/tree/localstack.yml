@@ -4,10 +4,11 @@
     vars_files: variables.yml
     environment:
       # SERVICES: 'iam,lambda,dynamodb,apigateway,s3,sns,kinesis'
-      DEFAULT_REGION: 'us-west-2'
+      # REGION: Europa (Irlanda)
+      DEFAULT_REGION: "eu-west-1"
       LAMBDA_EXECUTOR: "{{ ls_lambda_executor }}"
       LAMBDA_REMOTE_DOCKER: "{{ ls_lambda_remote_docker }}" 
-      DATA_DIR: "{{ ls_data_dir }}"
+      DATA_DIR: "{{ ls_data_dir }}"      
     tasks:
       - name: Tear down existing services
         docker_compose:

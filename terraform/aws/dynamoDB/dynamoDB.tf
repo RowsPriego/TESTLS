@@ -1,18 +1,5 @@
-# Managed policies
-data "aws_iam_policy" "EC2FullAccess" {
-  arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
-}
-
-data "aws_iam_policy" "APIGatewayFullAccess" {
-  arn = "arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator"
-}
-
-data "aws_iam_policy" "S3FullAccess" {
-  arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
-}
-
 provider "aws" {
-  region                      = "eu-west-1"
+  region                      = "us-west-2"
   access_key                  = "var.aws_access_key"
   secret_key                  = "var.aws_secret_key"
   
@@ -43,34 +30,5 @@ provider "aws" {
     sts            = "http://localhost:4592"
   }
 }
-resource "aws_iam_group" "k8s_developers" {
-  name = "k8s-developers"
-}
 
-resource "aws_iam_group" "s3_users" {
-  name = "s3-users"
-}
-
-
-resource "aws_iam_group_policy_attachment" "k8s-attach" {
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
-  group = "k8s-developers"
-}
-
-resource "aws_iam_group_policy_attachment" "s3-attach" {
-  policy_arn =  data.aws_iam_policy.S3FullAccess.arn
-  group = aws_iam_group.s3_users.name
-}
-
-resource "aws_iam_user" "k8sadmin" {
-  name = "k8sadmin"
-}
-
-resource "aws_iam_group_membership" "k8s-team" {
-  name = "k8s-team"
-
-  users = [aws_iam_user.k8sadmin.name]
-
-  group = aws_iam_group.k8s_developers.name
-
-}
+## Crear 

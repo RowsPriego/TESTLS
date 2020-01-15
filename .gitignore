@@ -3,3 +3,4 @@ hosts.yml
 localstack.policies
 *.tfstate.backup
 terraform.tfstate
+testingapps/
