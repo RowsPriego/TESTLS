@@ -11,6 +11,7 @@ data "aws_iam_policy" "S3FullAccess" {
   arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
 }
 
+
 provider "aws" {
   region                      = "eu-west-1"
   access_key                  = "var.aws_access_key"
@@ -74,3 +75,39 @@ resource "aws_iam_group_membership" "k8s-team" {
   group = aws_iam_group.k8s_developers.name
 
 }
+
+variable "iam_policy_arn" {
+  description = "IAM Policy to be attached to role"
+  type = "list"
+  default = [
+    "arn:aws:iam::aws:policy/AmazonEC2FullAccess", 
+    "arn:aws:iam::aws:policy/IAMFullAccess", 
+    "arn:aws:iam::aws:policy/AmazonS3FullAccess", 
+    "arn:aws:iam::aws:policy/AmazonVPCFullAccess", 
+    "arn:aws:iam::aws:policy/AmazonRoute53FullAccess"]
+
+}
+
+resource "aws_iam_role_policy_attachment" "role-policy-attachment" {
+  role       = "${var.iam_role_name}"
+  count      = "${length(var.iam_policy_arn)}"
+  policy_arn = "${var.iam_policy_arn[count.index]}"
+}
+
+resource "aws_iam_role" "k8s_role" {
+  name = "k8s_role"
+  assume_role_policy = <<EOF
+{
+  "Version": "2020-01-16",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",      
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+EOF

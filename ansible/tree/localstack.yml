@@ -8,6 +8,7 @@
       DEFAULT_REGION: "eu-west-1"
       LAMBDA_EXECUTOR: "{{ ls_lambda_executor }}"
       LAMBDA_REMOTE_DOCKER: "{{ ls_lambda_remote_docker }}" 
+      DEGUG: 1
       DATA_DIR: "{{ ls_data_dir }}"      
     tasks:
       - name: Tear down existing services

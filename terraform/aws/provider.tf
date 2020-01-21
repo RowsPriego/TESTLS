@@ -1,5 +1,5 @@
 provider "aws" {
-  region                      = "us-west-2"
+  region                      = "eu-west-1"
   access_key                  = "var.aws_access_key"
   secret_key                  = "var.aws_secret_key"
   
@@ -29,53 +29,4 @@ provider "aws" {
     stepfunctions  = "http://localhost:4585"
     sts            = "http://localhost:4592"
   }
-}
-
-## Crear tabla y contenido
-resource "aws_dynamodb_table" "basic-dynamodb-table" {
-  name           = "test"
-  billing_mode   = "PROVISIONED"
-  read_capacity  = 20
-  write_capacity = 20
-  hash_key       = "Id"
-  range_key      = "name"
-
-  
-
-
-  attribute {
-    name = "Id"
-    type = "S"
-  }
-
-  attribute {
-    name = "name"
-    type = "S"
-  }
-
-  attribute {
-    name = "value"
-    type = "S"
-  }
-
-  attribute {
-    name = "number"
-    type = "N"
-  }
-
-  ttl {
-    attribute_name = "TimeToExist"
-    enabled        = false
-  }
-
-  # global_secondary_index {
-  #   name               = "nameIndex"
-  #   hash_key           = "name"
-  #   range_key          = "TopScore"
-  #   write_capacity     = 10
-  #   read_capacity      = 10
-  #   projection_type    = "INCLUDE"
-  #   non_key_attributes = ["Id","value", "number"]
-  # }
-
 }
